@@ -9,7 +9,7 @@ import { useState } from "react";
 import animationData from '@/data/confetti.json'
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "lottie-react";
+import Lottie from "react-lottie";
 
 export const BentoGrid = ({
     className,
@@ -154,7 +154,10 @@ export const BentoGridItem = ({
                         <div className="mt-5 relative">
                             <div className={`absolute -bottom-5 right-0 
                                 ${copied ? 'block' : 'block'}`}>
-                                <Lottie options={defaultOptions} height={200} width={400} />
+                                <Lottie
+                                    options={defaultOptions}
+                                    height={200} width={400}
+                                />
                             </div>
 
                             <MagicButton

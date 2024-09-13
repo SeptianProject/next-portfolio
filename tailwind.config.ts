@@ -1,11 +1,15 @@
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-var-requires */
 import type { Config } from "tailwindcss";
 
-import svgToDataUri from "mini-svg-data-uri";
+const svgToDataUri = require("mini-svg-data-uri");
 
-import colors from "tailwindcss/colors";
-import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette";
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
   darkMode: ["class"],
